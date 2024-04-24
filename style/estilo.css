@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e3e9f7;
+  gap: 10px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.main-dashboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main.main-relatorios {
+  justify-content: initial;
+  align-items: initial;
+}
+main.main-produtos {
+  display: flex;
+  justify-content: initial;
+  align-items: initial;
+  margin: 10px;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  height: 100vh;
+  border-radius: 0px 18px 18px 0px;
+  position: relative;
+  transition: all 0.5s;
+  min-width: 82px;
+  z-index: 2;
+  list-style: none;
+}
+
+#sidebar_content {
+  padding: 12px;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#user_avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#user_infos {
+  display: flex;
+  flex-direction: column;
+}
+
+#user_infos span:last-child {
+  color: #6b6b6b;
+  font-size: 12px;
+}
+
+#side_items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.side-item {
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.side-item.active {
+  background-color: #4f46e5;
+}
+
+.side-item:hover:not(.active),
+#logout_btn:hover {
+  background-color: #4f46e5;
+}
+
+.side-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+}
+
+.side-item.active a {
+  color: #e3e9f7;
+}
+
+.side-item a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+#logout {
+  border-top: 1px solid #e3e9f7;
+  padding: 12px;
+}
+
+#logout_btn {
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 8px;
+  text-align: start;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#open_btn {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  background-color: #4f46e5;
+  color: #e3e9f7;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#open_btn_icon {
+  transition: transform 0.3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+  transform: rotate(180deg);
+}
+
+.item-description {
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  transition: width 0.6s;
+  height: 0px;
+}
+
+#sidebar.open-sidebar {
+  min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+  width: 150px;
+  height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+#link-relatorios:hover #lista-relatorios {
+  display: block;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.principal.principal-produtos {
+  padding-left: 20px;
+  font-size: 13px;
+}
+.pesquisar {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+.pesquisar input {
+  border: none;
+  width: 400px;
+}
+.pesquisar input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+.botoes-produtos {
+  padding: 5px;
+  border-radius: 5px;
+  width: 40px;
+  border: 1px solid gray;
+  background-color: #e3e9f7;
+  cursor: pointer;
+}
+.botoes-produtos-incluir {
+  margin: 10px 45px 0px 50px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: #e3e9f7;
+  cursor: pointer;
+}
+
+.botoes-produtos i {
+  color: #4f46e5;
+}
+.titulo-pagina {
+  background-color: #c9c9c9;
+}
+/* Estilo padrão para todos os itens de menu */
+.side-item {
+  list-style: none;
+  float: left;
+  position: relative;
+  display: inline;
+  width: auto;
+}
+
+/* Estilo para o item de menu ativo */
+.side-item.active {
+  background-color: #4f46e5; /* Altere para a cor roxa desejada */
+}
+.principal {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+.div-relatorio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  cursor: pointer;
+  text-decoration: none;
+}
+.filtras-pesquisar {
+  display: flex;
+  justify-content: space-between;
+}
+/*ISSO AQUI É CADASTRO DE PRODUTOS*/
+#opcoesLinhas {
+  border-radius: 10px;
+  height: 30px;
+}
+.teste {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#input-produtos {
+  border-radius: 10px;
+
+  border: 1px solid gray;
+}
+
+/*ESTILIZAÇÃO DA TABELA */
+.tabela-produtos {
+  border-collapse: collapse;
+}
+.ordem-tabela {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+td i {
+  color: #4f46e5;
+}
+
+th {
+  background-color: white;
+  color: #000;
+}
+/*BOTAOZIN DA COLUNA*/
+
+.descricao-tabela {
+  width: 400px;
+}
+
+/*criando botao <> */
+.input-ordem {
+  position: relative;
+  color: #0a0a0a;
+  opacity: 0;
+  top: 4px;
+  cursor: pointer;
+}
+.fa-sort-down {
+  position: relative;
+  right: 13px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tr:hover {
+  background-color: #ccc;
+}
+
+.sub-menu {
+  display: none;
+}
+/*SUB MENU COM SIDEBAR ABERTO*/
+.open-sidebar:hover .side-item:hover .sub-menu {
+  display: block;
+  position: relative;
+  list-style: none;
+  gap: 10px;
+  margin-top: 10px;
+}
+.open-sidebar:hover .side-item:hover .sub-menu a {
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sub-item:hover {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #7c77e2;
+}
+
+/*SUB MENU COM SIDEBAR FECHADO*/
+
+/*LINK DO SUB MENU COM SIDEBAR FECHADO*/
+.espaçosdasprincipais {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 82%;
+}
+.container-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.botao-incluir {
+  background-color: #4f46e5;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  left: 5px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+.opcoes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #e3e9f7;
+  padding: 20px 5px 0px 15px;
+  border-radius: 10px;
+  width: max-content;
+  max-width: 210px;
+  gap: 10px;
+  left: 5px;
+  height: 100%;
+  margin-top: 20px;
+  align-items: center;
+}
+.opcoes .side-item {
+  align-items: center;
+  gap: 1px;
+}
+
+/*MODAL DE CADASTRO*/
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog {
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 0.3);
+  top: 200px;
+  /*isso aqui precisa mexer no midiaQ*/
+  left: 100px;
+  height: max-content;
+  padding: 20px;
+  width: max-content;
+}
+dialog form {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+dialog form label {
+  font-size: 12px;
+  color: rgb(39, 38, 38);
+}
+dialog form input,
+select {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/*ICONES DE INFORMAÇÃO */
+.inf-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*BOTAO DE MAIS OPÇÕES VIRADO NA VERTICAL */
+.fa-ellipsis {
+  transform: rotate(90deg);
+}
