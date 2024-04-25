@@ -15,16 +15,25 @@ fecharModal.onclick = function () {
   modal.close();
 };
 
+//ESSA FUNÇÃO AQUI EU GUARDO PRA
+
 const inputDeOrdem = document.querySelectorAll(".input-ordem");
+inputDeOrdem.checked;
 const mudarIcone = document.querySelectorAll(".fa-sort-down");
 
-//ESSA FUNÇÃO AQUI EU GUARDO PRA
-inputDeOrdem.addEventListener("change", function () {
-  if (this.checked) {
-    mudarIcone.setAttribute("class", "fa-solid fa-sort-down");
-  } else {
-    mudarIcone.setAttribute("class", "fa-solid fa-sort-up");
-  }
+inputDeOrdem.forEach((input) => {
+  input.addEventListener("change", function () {
+    const icone = this.closest("th").querySelector(".fa-sort-down");
+    console.log(icone);
+    if (this.checked) {
+      icone.setAttribute("class", "fa-solid fa-sort-up");
+    } else {
+      const temClasse = icone.classList.contains("fa-solid fa-sort-up");
+      if (temClasse == true) {
+        icone.setAttribute("class", "fa-solid fa-sort-down");
+      }
+    }
+  });
 });
 
 //teste
