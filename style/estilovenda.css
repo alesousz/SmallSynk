@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #98c8e7;
+}
+
+.logo img {
+    height: 200px;
+}
+
+.dadosloja {
+    text-align: right;
+}
+
+.infoprodutos {
+    text-align: center;
+    margin-top: 50px;
+}
+.infoprodutos img {
+    max-width: 200px;
+}
+
+.registro {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.registro img {
+    max-width: 200px;
+}
+
+.dadoscompra {
+    margin-top: 20px;
+}
+
+.dadoscompra input {
+    margin: 5px;
+    padding: 8px;
+    width: 120px;
+}
+.dadoscompra button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dadoscompra button:hover {
+    background-color: #0056b3;
+}
+
