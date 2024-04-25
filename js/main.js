@@ -26,3 +26,5 @@ inputDeOrdem.addEventListener("change", function () {
     mudarIcone.setAttribute("class", "fa-solid fa-sort-up");
   }
 });
+
+//teste

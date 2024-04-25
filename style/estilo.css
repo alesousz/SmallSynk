@@ -463,3 +463,11 @@ select {
 .fa-ellipsis {
   transform: rotate(90deg);
 }
+
+/*GRAFICO TESTE*/
+iframe {
+  width: 1400px;
+  height: 99vh;
+  border-radius: 10px;
+  background-color: #000;
+}
