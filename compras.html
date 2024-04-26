@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="/style/estilo.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <title>Compras</title>
   </head>
   <body>
@@ -134,6 +135,9 @@
 
     <main class="main-compras">
       <dialog class="altteste dialog1">
+        <dialog class="modalDentrodoModal">
+          oi
+        </dialog>
         <header>
           <div class="teste234">
             <div></div>
@@ -142,70 +146,10 @@
             </a>
           </div>
         </header>
-        <main class="main-produtos">
-          <dialog>
-            <header>
-              <h3>Cadastrar novo produto</h3>
-              <br />
-              <div class="inf-form">
-                <p>Dados basicos</p>
-                <h5>(*) Campos obrigatorios</h5>
-              </div>
-            </header>
-
-            <div>
-              <form action="">
-                <div>
-                  <label for="nome">Nome/Descrição</label>
-                  <input type="text" id="nome" />
-                  <label for="codigo">Codigo (EAN)</label>
-                  <input type="text" id="codigo" />
-                  <label for="preco">Preco unitario </label>
-                  <input type="text" id="preco" />
-                </div>
-
-                <br />
-                <div>
-                  <label for="unidade">Unidade</label>
-                  <input type="text" id="unidade" />
-                  <label for="setor">Setor Balança</label>
-                  <input type="text" id="setor" />
-                  <label for="validade">Validade</label>
-                  <input type="text" id="validade" />
-                </div>
-
-                <div>
-                  <label for="peso">Peso</label>
-                  <input type="text" id="peso" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                </div>
-                <div>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="imagem">Imagem</label>
-                  <input type="file" name="" id="imagem" />
-                </div>
-              </form>
-            </div>
-            <footer></footer>
-            <button class="fecharmodal">FECHAR</button>
-            <button class="salvarProduto">AVANÇAR</button>
-          </dialog>
-          <div class="principal principal-produtos">
-            <div class="espaçosdasprincipais">
-              <div class="container-principal">
-                <h2>PRODUTOS</h2>
+        <main class="main-compras">
+          <div class="principal principal-compras">
+                <h2>PEDIDOS</h2>
+                
                 <div class="container-filtras-pesquisar">
                   <div class="filtras-pesquisar">
                     <div class="part1-filtras">
@@ -229,18 +173,9 @@
                     </div>
                     <div>
                       <span>
-                        <button class="botoes-produtos">
+                        <button class="botoes-compras">
                           <i class="fa-solid fa-bag-shopping"></i>
-                        </button>
-                      </span>
-                      <span>
-                        <button class="botoes-produtos">
-                          <i class="fa-solid fa-file-pdf"></i>
-                        </button>
-                      </span>
-                      <span>
-                        <button class="botoes-produtos">
-                          <i class="fa-solid fa-trash-can"></i>
+                          REALIZAR COMPRA
                         </button>
                       </span>
                     </div>
@@ -322,7 +257,7 @@
                     <td>50,000</td>
                     <td>Ativo</td>
                     <td>
-                      <i class="fa-solid fa-box-archive"></i>
+                      <i style="color: red;" class="fa-solid fa-box-archive"></i>
                       <i class="fa-solid fa-shopping-cart"></i>
                       <i class="fa-solid fa-bag-shopping"></i>
                     </td>
@@ -338,7 +273,7 @@
                     <td>Ativo</td>
                     <td>
                       <i class="fa-solid fa-box-archive"></i>
-                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i style="color: green;" class="fa-solid fa-shopping-cart"></i>
                       <i class="fa-solid fa-bag-shopping"></i>
                     </td>
                     <td><i class="fa-solid fa-sliders"></i></td>
@@ -352,7 +287,7 @@
                     <td>70,000</td>
                     <td>Ativo</td>
                     <td>
-                      <i class="fa-solid fa-box-archive"></i>
+                      <i style="color: red;" class="fa-solid fa-box-archive"></i>
                       <i class="fa-solid fa-shopping-cart"></i>
                       <i class="fa-solid fa-bag-shopping"></i>
                     </td>
@@ -370,7 +305,7 @@
                     <td>Inativo</td>
                     <td>
                       <i class="fa-solid fa-box-archive"></i>
-                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i style="color: green;" class="fa-solid fa-shopping-cart"></i>
                       <i class="fa-solid fa-bag-shopping"></i>
                     </td>
                     <td><i class="fa-solid fa-sliders"></i></td>
@@ -384,7 +319,7 @@
                     <td>30,000</td>
                     <td>Ativo</td>
                     <td>
-                      <i class="fa-solid fa-box-archive"></i>
+                      <i style="color: red;" class="fa-solid fa-box-archive"></i>
                       <i class="fa-solid fa-shopping-cart"></i>
                       <i class="fa-solid fa-bag-shopping"></i>
                     </td>
@@ -409,36 +344,6 @@
                     <td colspan="11"><hr /></td>
                   </tr>
                 </table>
-              </div>
-              <div class="container-secundario">
-                <button class="botao-incluir">
-                  <i class="fa-solid fa-plus"></i>
-                  <span>Incluir Produto</span>
-                </button>
-
-                <div class="opcoes">
-                  <a class="side-item">
-                    <i class="fas fa-upload"></i>
-                    <span>Exportar produto multiloja</span>
-                  </a>
-                  <hr />
-                  <a class="side-item">
-                    <i class="fas fa-sync"></i>
-                    <span>Sincronizar estoque de lojas</span>
-                  </a>
-                  <hr />
-                  <a class="side-item">
-                    <i class="fa-solid fa-plus"></i>
-                    <span>Incluir categorias de produtos</span>
-                  </a>
-                  <hr />
-                  <a class="side-item">
-                    <i class="fas fa-edit"></i>
-                    <span>Editar categorias de produtos</span>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </main>
       </dialog>
@@ -452,65 +357,6 @@
           </div>
         </header>
         <main class="main-produtos">
-          <dialog>
-            <header>
-              <h3>Cadastrar novo produto</h3>
-              <br />
-              <div class="inf-form">
-                <p>Dados basicos</p>
-                <h5>(*) Campos obrigatorios</h5>
-              </div>
-            </header>
-
-            <div>
-              <form action="">
-                <div>
-                  <label for="nome">Nome/Descrição</label>
-                  <input type="text" id="nome" />
-                  <label for="codigo">Codigo (EAN)</label>
-                  <input type="text" id="codigo" />
-                  <label for="preco">Preco unitario </label>
-                  <input type="text" id="preco" />
-                </div>
-
-                <br />
-                <div>
-                  <label for="unidade">Unidade</label>
-                  <input type="text" id="unidade" />
-                  <label for="setor">Setor Balança</label>
-                  <input type="text" id="setor" />
-                  <label for="validade">Validade</label>
-                  <input type="text" id="validade" />
-                </div>
-
-                <div>
-                  <label for="peso">Peso</label>
-                  <input type="text" id="peso" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                </div>
-                <div>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="imagem">Imagem</label>
-                  <input type="file" name="" id="imagem" />
-                </div>
-              </form>
-            </div>
-            <footer></footer>
-            <button class="fecharmodal">FECHAR</button>
-            <button class="salvarProduto">AVANÇAR</button>
-          </dialog>
           <div class="principal principal-produtos">
             <div class="espaçosdasprincipais">
               <div class="container-principal">
@@ -761,65 +607,6 @@
           </div>
         </header>
         <main class="main-produtos">
-          <dialog>
-            <header>
-              <h3>Cadastrar novo produto</h3>
-              <br />
-              <div class="inf-form">
-                <p>Dados basicos</p>
-                <h5>(*) Campos obrigatorios</h5>
-              </div>
-            </header>
-
-            <div>
-              <form action="">
-                <div>
-                  <label for="nome">Nome/Descrição</label>
-                  <input type="text" id="nome" />
-                  <label for="codigo">Codigo (EAN)</label>
-                  <input type="text" id="codigo" />
-                  <label for="preco">Preco unitario </label>
-                  <input type="text" id="preco" />
-                </div>
-
-                <br />
-                <div>
-                  <label for="unidade">Unidade</label>
-                  <input type="text" id="unidade" />
-                  <label for="setor">Setor Balança</label>
-                  <input type="text" id="setor" />
-                  <label for="validade">Validade</label>
-                  <input type="text" id="validade" />
-                </div>
-
-                <div>
-                  <label for="peso">Peso</label>
-                  <input type="text" id="peso" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                </div>
-                <div>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="imagem">Imagem</label>
-                  <input type="file" name="" id="imagem" />
-                </div>
-              </form>
-            </div>
-            <footer></footer>
-            <button class="fecharmodal">FECHAR</button>
-            <button class="salvarProduto">AVANÇAR</button>
-          </dialog>
           <div class="principal principal-produtos">
             <div class="espaçosdasprincipais">
               <div class="container-principal">
@@ -1070,65 +857,6 @@
           </div>
         </header>
         <main class="main-produtos">
-          <dialog>
-            <header>
-              <h3>Cadastrar novo produto</h3>
-              <br />
-              <div class="inf-form">
-                <p>Dados basicos</p>
-                <h5>(*) Campos obrigatorios</h5>
-              </div>
-            </header>
-
-            <div>
-              <form action="">
-                <div>
-                  <label for="nome">Nome/Descrição</label>
-                  <input type="text" id="nome" />
-                  <label for="codigo">Codigo (EAN)</label>
-                  <input type="text" id="codigo" />
-                  <label for="preco">Preco unitario </label>
-                  <input type="text" id="preco" />
-                </div>
-
-                <br />
-                <div>
-                  <label for="unidade">Unidade</label>
-                  <input type="text" id="unidade" />
-                  <label for="setor">Setor Balança</label>
-                  <input type="text" id="setor" />
-                  <label for="validade">Validade</label>
-                  <input type="text" id="validade" />
-                </div>
-
-                <div>
-                  <label for="peso">Peso</label>
-                  <input type="text" id="peso" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                  <label for="marca">Marca</label>
-                  <input type="text" id="marca" />
-                </div>
-                <div>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="Status">Status</label>
-                  <select name="escolha">
-                    <option value="opcao1">Ativo</option>
-                    <option value="opcao2" selected>Inativo</option>
-                  </select>
-                  <label for="imagem">Imagem</label>
-                  <input type="file" name="" id="imagem" />
-                </div>
-              </form>
-            </div>
-            <footer></footer>
-            <button class="fecharmodal">FECHAR</button>
-            <button class="salvarProduto">AVANÇAR</button>
-          </dialog>
           <div class="principal principal-produtos">
             <div class="espaçosdasprincipais">
               <div class="container-principal">
@@ -1369,9 +1097,10 @@
           </div>
         </main>
       </dialog>
+
       <div class="principal principal-compras">
         <div class="titulo-sessao">
-          <h3>Gestão de pedidos</h3>
+          <h3>Gestão de produtos</h3>
           
           <hr>
           <br>
@@ -1383,18 +1112,18 @@
         <div class="info-compras">
           <div style="background-image: linear-gradient(195deg, #42424a, #191919);" class="info-box dialog1" id="dialog1">
             <div class="info-texto">
-              <h3>PEDIDOS EM ABERTO</h3>
-              <p>R$1000</p>
+              <h3>CRIAR LISTA DE PEDIDOS</h3>
+              <p style="color: red;">Existem produtos em excasses!!</p>
             </div>
-            <i class="fa-solid fa-chart-line"></i>
+            <i style="color: #d43f3f;" class="fa-solid fa-shopping-cart shopping"></i>
           </div>
           <div style="background-image: linear-gradient(195deg, #ec407a, #d81b60);" class="info-box dialog2" id="dialog2"><div class="info-texto">
-            <h3>Pedidos 1</h3>
+            <h3>PEDIDOS EM ABERTO</h3>
             <p>R$1000</p>
           </div>
-          <i class="fa-solid fa-chart-line"></i></div>
+          <i class="fa-solid fa-box"></i></div>
           <div style="background-image: linear-gradient(195deg, #66bb6a, #43a047);" class="info-box dialog3" id="dialog3"><div class="info-texto">
-            <h3>TESTE 1</h3>
+            <h3>COTAÇÃO DE PRODUTOS</h3>
             <p>R$1000</p>
           </div>
           <i class="fa-solid fa-chart-line"></i></div>
@@ -1402,7 +1131,7 @@
           </div>
           
           <div style="background-image: linear-gradient(195deg, #49a3f1, #1a73e8);" class="info-box dialog4" id="dialog4"><div class="info-texto">
-            <h3>TESTE 2</h3>
+            <h3>NÃO SEI</h3>
             <p>R$1000</p>
           </div>
           <i class="fa-solid fa-chart-line"></i></div>
@@ -1465,6 +1194,9 @@
         </div>
         
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    
+
     <script src="/js/main.js"></script>
   </body>
 </html>

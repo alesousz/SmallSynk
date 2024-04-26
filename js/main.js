@@ -8,6 +8,8 @@ const botaoIncluir = document.querySelector(".botao-incluir");
 const modais = document.querySelectorAll("dialog");
 const fecharModal = document.querySelector(".fecharmodal");
 const modalDeDiv = document.querySelectorAll(".info-box");
+const modalDentroDaModal = document.querySelector(".botoes-compras");
+const modalDentrodoModal = document.querySelector(".modalDentrodoModal");
 
 if (botaoIncluir) {
   botaoIncluir.onclick = function () {
@@ -47,6 +49,7 @@ function criarModal(elemento1, elemento2) {
   }
 }
 criarModal(botaoIncluir, modal);
+criarModal(modalDentroDaModal, modalDentrodoModal);
 
 //ESSA FUNÇÃO SERVE SO PRA MUDAR O ICONE <3 DEMOREI 75 HORAS PRA FAZER ELA
 
@@ -60,10 +63,8 @@ inputDeOrdem.forEach((input) => {
     const icone2 = this.closest("th").querySelector(".fa-sort-up");
     if (this.checked == true) {
       icone.setAttribute("class", "fa-solid fa-sort-up");
-      inputDeOrdem.style.display = "block";
     } else if (this.checked == false) {
       icone2.setAttribute("class", "fa-solid fa-sort-down");
-      inputDeOrdem.style.display = "none";
     }
   });
 });
@@ -86,8 +87,8 @@ var chart = new Chart(ctx, {
       },
       {
         label: "Vendas mês de FADF",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(220, 123, 123)",
+        backgroundColor: "rgb(21, 54, 142)",
+        borderColor: "rgb(21, 54, 142)",
         data: [0, 25, 15, 27, 13, 30, 68],
       },
     ],
@@ -96,3 +97,13 @@ var chart = new Chart(ctx, {
   // Configuration options go here
   options: {},
 });
+
+//PDF
+
+function gerarPdf() {
+  const doc = new jsPDF();
+
+  doc.text("Lorem Ypussk, sendo o descritivo", 10, 10);
+  doc.save("Relatorio de vendas.pdf");
+}
+modalDentroDaModal.addEventListener("click", gerarPdf);

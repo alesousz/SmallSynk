@@ -237,6 +237,21 @@ main.main-compras {
   background-color: #e3e9f7;
   cursor: pointer;
 }
+.botoes-compras {
+  display: flex;
+  padding: 5px;
+  border-radius: 10px;
+  width: 130px;
+  border: 1px solid gray;
+  background-color: #e3e9f7;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+}
+.botoes-compras i {
+  margin: 2px;
+  font-size: 16px;
+}
 .botoes-produtos-incluir {
   margin: 10px 45px 0px 50px;
   align-items: center;
@@ -507,6 +522,9 @@ iframe {
   justify-content: space-between;
   gap: 10px;
 }
+.info-texto p {
+  font-size: 12px;
+}
 
 .info-box {
   border-radius: 10px;
@@ -590,7 +608,6 @@ iframe {
   width: 100%;
   height: 100%;
   background-color: white;
-  opacity: 0.9;
   border: none;
 }
 .teste234 {
@@ -603,4 +620,15 @@ iframe {
 }
 .teste234 a i {
   color: red;
+}
+/*dialog dentro do dialog*/
+.modalDentrodoModal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background-color: white;
+  border: none;
 }
