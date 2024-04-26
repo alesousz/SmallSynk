@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado</title>
-    <link rel="stylesheet" href="./style/estilovenda.css">
+    <title>Página de Venda</title>
+    <link rel="stylesheet" href="./style/estilovenda.css"> 
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="./assets/logoloja.png" alt="Logo do Supermercado">
+        
+        <div class="logosmall">
+            <img src="./assets/Small Sync.png" alt="Logo do Site"> >
         </div>
+        
         <div class="dadosloja">
-            <h1>Bom Preço</h1>
-            <p>R 22 nº 001 - Centro</p>
-            <p>Telefone: (34) 3333-3333</p>
-            <p>Ituiutaba - MG</p>
+            <div class="logoloja">
+                <img src="./assets/logoloja.png" alt="Logo da Loja">
+            </div>
+            <div class="infoloja">
+                <h1>Bom Preço</h1>
+                <p>CNPJ: 99.999/0001-99</p>
+                <p>End: R 22 nº 22 - Centro - Ituiutaba MG</p> 
+                <p>Telefone: (99) 9999-9999</p>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="ifoprodutos">
-            <img src="./assets/coca.jpg" alt="Produto"> <!-- mostrar a imagem do produto que está sendo registrado -->
-        </div>
-        <div class="registro">
-            <img src="./assets/cupom.jpg" alt="Cupom Fiscal"><!-- mostrar a imagem do cupom sendo gerado -->
-            <div class="items">
-                <!-- Itens serão inseridos aqui -->
+        <div class="areavenda">
+            
+            <div class="produtoinfo">
+                <div class="produtoimagem">
+                    <img src="./assets/coca.jpg" alt="Imagem do Produto">
+                </div>
+                <div class="produtodescricao">
+                    <h2>Coca Cola lt 350ml</h2>
+                </div>
             </div>
-            <div class="dadoscompra">
-                <input type="number" placeholder="Cód Barras">
-                <input type="number" placeholder="Quantidade">
-                <input type="number" placeholder="Preço Unit">
-                <input type="number" placeholder="Preço Total" disabled>
-                <input type="number" placeholder="Subtotal" disabled>
+
+            
+            <div class="itensregistrados">
+                <h2>Itens Registrados</h2>
                 
             </div>
         </div>
     </main>
+
+
+    
+    <div class="campositem">
+        <input type="text" placeholder="Quantidade">
+        <input type="text" placeholder="Código de Barras">
+    </div>
+    
+    <div class="precositem">
+        <p>Preço Unitário: R$ X,XX</p>
+        <p>Preço Total: R$ X,XX</p>
+    </div>
+    
+    <div class="subtotal">
+        <p>Subtotal: R$ X,XX</p>
+    </div>
+    
+    
+    <div class="funcoescaixa">
+        <ul>
+            <li>F1 Iniciar Caixa</li>
+            <li>F2 Inserir Cliente</li>
+            <li>F3 Receber Dinheiro</li>
+            <li>F4 Cartão de Crédito</li>
+            <li>F5 Cartão de Débito</li>
+            <li>F6 Cartão Benefício</li>
+            <li>F7 Cheque</li>
+            <li>F8 Sangria</li>
+            <li>F9 Encerrar Caixa</li>
+        </ul>
+    </div>
+
+    <footer>
+       
+    </footer>
 </body>
 </html>
