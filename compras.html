@@ -11,7 +11,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/style/estilo.css" />
-    <title>Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+    <title>Compras</title>
   </head>
   <body>
     <nav id="sidebar">
@@ -22,7 +23,7 @@
             id="user_avatar"
             alt="Avatar"
           />
-
+          
           <p id="user_infos">
             <span class="item-description">
               <a class="item-description" href="#">Fulano de Tal</a></span
@@ -32,7 +33,7 @@
         </div>
 
         <ul id="side_items">
-          <li class="side-item active">
+          <li class="side-item">
             <a href="/Dashboard.html">
               <i class="fa-solid fa-chart-line"></i>
               <span class="item-description"> Dashboard </span>
@@ -78,7 +79,7 @@
             </ul>
           </li>
 
-          <li class="side-item">
+          <li class="side-item active">
             <a href="/compras.html">
               <i class="fa-solid fa-shopping-cart"></i>
               <span class="item-description"> Compras </span>
@@ -131,17 +132,101 @@
       </div>
     </nav>
 
-    <main class="main-dashboard">
-      <div class="container-principal-1">
-        <iframe
-          title="teste"
-          width="1140"
-          height="541.25"
-          src="https://app.powerbi.com/reportEmbed?reportId=56ce4d2f-cdb3-43dc-b823-71a05e4d2416&autoAuth=true&embeddedDemo=true"
-          frameborder="0"
-          allowfullscreen="true"
-        ></iframe>
-      </div>
+    <main class="main-produtos">
+      <div class="principal principal-compras">
+        <div class="titulo-sessao">
+          <h3>Gestão de pedidos</h3>
+          <br>
+          <hr>
+          <br>
+          <p>
+            <i class="fa-solid fa-house"></i> / Vendas, pedidos e fornecedores
+          </p>
+        </div>
+
+        <div class="info-compras">
+          <div style="background-image: linear-gradient(195deg, #42424a, #191919);" class="info-box">
+            <div class="info-texto">
+              <h3>Pedidos</h3>
+              <p>R$1000</p>
+            </div>
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div style="background-image: linear-gradient(195deg, #ec407a, #d81b60);" class="info-box"><div class="info-texto">
+            <h3>Pedidos 1</h3>
+            <p>R$1000</p>
+          </div>
+          <i class="fa-solid fa-chart-line"></i></div>
+          <div style="background-image: linear-gradient(195deg, #66bb6a, #43a047);" class="info-box"><div class="info-texto">
+            <h3>TESTE 1</h3>
+            <p>R$1000</p>
+          </div>
+          <i class="fa-solid fa-chart-line"></i></div>
+          <div>
+          </div>
+          
+          <div style="background-image: linear-gradient(195deg, #49a3f1, #1a73e8);" class="info-box"><div class="info-texto">
+            <h3>TESTE 2</h3>
+            <p>R$1000</p>
+          </div>
+          <i class="fa-solid fa-chart-line"></i></div>
+        </div>
+        <div class="container">
+          <div class="testegrafico">
+            <canvas id="myChart" style="height: 300px; width: 300px;"></canvas>
+          </div>
+          <div class="feed">
+            <div class="feed-titulo">
+              <h4>Feed</h4>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="feed-single">
+              <div class="feed-text">
+                <div class="circle-icon"><i class="fa-solid fa-bell"></i></div>
+                
+                <span>Teste de coisas</span>
+              </div>
+              <div class="feed-time">
+                <h5>30 minutos agr</h5>
+              </div>
+            </div>
+            <div class="feed-single">
+              <div class="feed-text">
+                <div class="circle-icon"><i class="fa-solid fa-bell"></i></div>
+                
+                <span>Teste de coisas</span>
+              </div>
+              <div class="feed-time">
+                <h5>30 minutos agr</h5>
+              </div>
+            </div>
+            <div class="feed-single">
+              <div class="feed-text">
+                <div class="circle-icon"><i class="fa-solid fa-bell"></i></div>
+                
+                <span>Teste de coisas</span>
+              </div>
+              <div class="feed-time">
+                <h5>30 minutos agr</h5>
+              </div>
+            </div>
+            <div class="feed-single">
+              <div class="feed-text">
+                <div class="circle-icon"><i class="fa-solid fa-bell"></i></div>
+                
+                <span>Teste de coisas</span>
+              </div>
+              <div class="feed-time">
+                <h5>30 minutos agr</h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
     </main>
     <script src="/js/main.js"></script>
   </body>
