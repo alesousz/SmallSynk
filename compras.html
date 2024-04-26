@@ -11,7 +11,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/style/estilo.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Compras</title>
   </head>
   <body>
@@ -132,11 +132,1247 @@
       </div>
     </nav>
 
-    <main class="main-produtos">
+    <main class="main-compras">
+      <dialog class="altteste dialog1">
+        <header>
+          <div class="teste234">
+            <div></div>
+            <a href="">
+              <i class="fa-solid fa-x"></i>
+            </a>
+          </div>
+        </header>
+        <main class="main-produtos">
+          <dialog>
+            <header>
+              <h3>Cadastrar novo produto</h3>
+              <br />
+              <div class="inf-form">
+                <p>Dados basicos</p>
+                <h5>(*) Campos obrigatorios</h5>
+              </div>
+            </header>
+
+            <div>
+              <form action="">
+                <div>
+                  <label for="nome">Nome/Descrição</label>
+                  <input type="text" id="nome" />
+                  <label for="codigo">Codigo (EAN)</label>
+                  <input type="text" id="codigo" />
+                  <label for="preco">Preco unitario </label>
+                  <input type="text" id="preco" />
+                </div>
+
+                <br />
+                <div>
+                  <label for="unidade">Unidade</label>
+                  <input type="text" id="unidade" />
+                  <label for="setor">Setor Balança</label>
+                  <input type="text" id="setor" />
+                  <label for="validade">Validade</label>
+                  <input type="text" id="validade" />
+                </div>
+
+                <div>
+                  <label for="peso">Peso</label>
+                  <input type="text" id="peso" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                </div>
+                <div>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="imagem">Imagem</label>
+                  <input type="file" name="" id="imagem" />
+                </div>
+              </form>
+            </div>
+            <footer></footer>
+            <button class="fecharmodal">FECHAR</button>
+            <button class="salvarProduto">AVANÇAR</button>
+          </dialog>
+          <div class="principal principal-produtos">
+            <div class="espaçosdasprincipais">
+              <div class="container-principal">
+                <h2>PRODUTOS</h2>
+                <div class="container-filtras-pesquisar">
+                  <div class="filtras-pesquisar">
+                    <div class="part1-filtras">
+                      <span
+                        ><button class="botoes-produtos">
+                          <i class="fa-solid fa-filter"></i></button
+                      ></span>
+                      <span class="pesquisar"
+                        ><input
+                          placeholder="Pesquisar por codigo, descrição ou GTIN"
+                          type="text" />
+                        <button class="botao-pesquisar">
+                          <i class="fa-solid fa-magnifying-glass"></i></button
+                      ></span>
+
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </button>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-file-pdf"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p>Situação: Sem filtros</p>
+                <div class="ordem-tabela">
+                  <input type="checkbox" name="" id="" />
+                  <i class="fa-solid fa-sort-down"></i>
+                  <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <table class="tabela-produtos">
+                  <tr>
+                    <th class="descricao-tabela">Descrição</th>
+
+                    <th>Codigo</th>
+
+                    <th>
+                      Unidade
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th class="checkbox">
+                      Preço
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th>
+                      Estoque
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th>
+                      Ativo/Inativo
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+
+                  <tr>
+                    <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                    <td>#45675</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Chocolate</td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 12</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Toddy</td>
+                    <td>#564649</td>
+                    <td>NU</td>
+
+                    <td>R$ 18,20</td>
+                    <td>70,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="" id="" />Chocolate Amargo
+                    </td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>20,000</td>
+                    <td>Inativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Feijão</td>
+                    <td>#79679</td>
+                    <td>NU</td>
+
+                    <td>R$18</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Arroz</td>
+                    <td>#78469</td>
+                    <td>NU</td>
+
+                    <td>R$ 32</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td colspan="11"><hr /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="container-secundario">
+                <button class="botao-incluir">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Incluir Produto</span>
+                </button>
+
+                <div class="opcoes">
+                  <a class="side-item">
+                    <i class="fas fa-upload"></i>
+                    <span>Exportar produto multiloja</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Sincronizar estoque de lojas</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Incluir categorias de produtos</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-edit"></i>
+                    <span>Editar categorias de produtos</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </dialog>
+      <dialog class="altteste dialog2">
+        <header>
+          <div class="teste234">
+            <div></div>
+            <a href="">
+              <i class="fa-solid fa-x"></i>
+            </a>
+          </div>
+        </header>
+        <main class="main-produtos">
+          <dialog>
+            <header>
+              <h3>Cadastrar novo produto</h3>
+              <br />
+              <div class="inf-form">
+                <p>Dados basicos</p>
+                <h5>(*) Campos obrigatorios</h5>
+              </div>
+            </header>
+
+            <div>
+              <form action="">
+                <div>
+                  <label for="nome">Nome/Descrição</label>
+                  <input type="text" id="nome" />
+                  <label for="codigo">Codigo (EAN)</label>
+                  <input type="text" id="codigo" />
+                  <label for="preco">Preco unitario </label>
+                  <input type="text" id="preco" />
+                </div>
+
+                <br />
+                <div>
+                  <label for="unidade">Unidade</label>
+                  <input type="text" id="unidade" />
+                  <label for="setor">Setor Balança</label>
+                  <input type="text" id="setor" />
+                  <label for="validade">Validade</label>
+                  <input type="text" id="validade" />
+                </div>
+
+                <div>
+                  <label for="peso">Peso</label>
+                  <input type="text" id="peso" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                </div>
+                <div>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="imagem">Imagem</label>
+                  <input type="file" name="" id="imagem" />
+                </div>
+              </form>
+            </div>
+            <footer></footer>
+            <button class="fecharmodal">FECHAR</button>
+            <button class="salvarProduto">AVANÇAR</button>
+          </dialog>
+          <div class="principal principal-produtos">
+            <div class="espaçosdasprincipais">
+              <div class="container-principal">
+                <h2>PRODUTOS</h2>
+                <div class="container-filtras-pesquisar">
+                  <div class="filtras-pesquisar">
+                    <div class="part1-filtras">
+                      <span
+                        ><button class="botoes-produtos">
+                          <i class="fa-solid fa-filter"></i></button
+                      ></span>
+                      <span class="pesquisar"
+                        ><input
+                          placeholder="Pesquisar por codigo, descrição ou GTIN"
+                          type="text" />
+                        <button class="botao-pesquisar">
+                          <i class="fa-solid fa-magnifying-glass"></i></button
+                      ></span>
+
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </button>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-file-pdf"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p>Situação: Sem filtros</p>
+                <div class="ordem-tabela">
+                  <input type="checkbox" name="" id="" />
+                  <i class="fa-solid fa-sort-down"></i>
+                  <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <table class="tabela-produtos">
+                  <tr>
+                    <th class="descricao-tabela">Descrição</th>
+
+                    <th>Codigo</th>
+
+                    <th>
+                      Unidade
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th class="checkbox">
+                      Preço
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th>
+                      Estoque
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th>
+                      Ativo/Inativo
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+
+                  <tr>
+                    <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                    <td>#45675</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Chocolate</td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 12</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Toddy</td>
+                    <td>#564649</td>
+                    <td>NU</td>
+
+                    <td>R$ 18,20</td>
+                    <td>70,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="" id="" />Chocolate Amargo
+                    </td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>20,000</td>
+                    <td>Inativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Feijão</td>
+                    <td>#79679</td>
+                    <td>NU</td>
+
+                    <td>R$18</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Arroz</td>
+                    <td>#78469</td>
+                    <td>NU</td>
+
+                    <td>R$ 32</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td colspan="11"><hr /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="container-secundario">
+                <button class="botao-incluir">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Incluir Produto</span>
+                </button>
+
+                <div class="opcoes">
+                  <a class="side-item">
+                    <i class="fas fa-upload"></i>
+                    <span>Exportar produto multiloja</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Sincronizar estoque de lojas</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Incluir categorias de produtos</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-edit"></i>
+                    <span>Editar categorias de produtos</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </dialog>
+      <dialog class="altteste dialog3">
+        <header>
+          <div class="teste234">
+            <div></div>
+            <a href="">
+              <i class="fa-solid fa-x"></i>
+            </a>
+          </div>
+        </header>
+        <main class="main-produtos">
+          <dialog>
+            <header>
+              <h3>Cadastrar novo produto</h3>
+              <br />
+              <div class="inf-form">
+                <p>Dados basicos</p>
+                <h5>(*) Campos obrigatorios</h5>
+              </div>
+            </header>
+
+            <div>
+              <form action="">
+                <div>
+                  <label for="nome">Nome/Descrição</label>
+                  <input type="text" id="nome" />
+                  <label for="codigo">Codigo (EAN)</label>
+                  <input type="text" id="codigo" />
+                  <label for="preco">Preco unitario </label>
+                  <input type="text" id="preco" />
+                </div>
+
+                <br />
+                <div>
+                  <label for="unidade">Unidade</label>
+                  <input type="text" id="unidade" />
+                  <label for="setor">Setor Balança</label>
+                  <input type="text" id="setor" />
+                  <label for="validade">Validade</label>
+                  <input type="text" id="validade" />
+                </div>
+
+                <div>
+                  <label for="peso">Peso</label>
+                  <input type="text" id="peso" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                </div>
+                <div>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="imagem">Imagem</label>
+                  <input type="file" name="" id="imagem" />
+                </div>
+              </form>
+            </div>
+            <footer></footer>
+            <button class="fecharmodal">FECHAR</button>
+            <button class="salvarProduto">AVANÇAR</button>
+          </dialog>
+          <div class="principal principal-produtos">
+            <div class="espaçosdasprincipais">
+              <div class="container-principal">
+                <h2>PRODUTOS</h2>
+                <div class="container-filtras-pesquisar">
+                  <div class="filtras-pesquisar">
+                    <div class="part1-filtras">
+                      <span
+                        ><button class="botoes-produtos">
+                          <i class="fa-solid fa-filter"></i></button
+                      ></span>
+                      <span class="pesquisar"
+                        ><input
+                          placeholder="Pesquisar por codigo, descrição ou GTIN"
+                          type="text" />
+                        <button class="botao-pesquisar">
+                          <i class="fa-solid fa-magnifying-glass"></i></button
+                      ></span>
+
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </button>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-file-pdf"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p>Situação: Sem filtros</p>
+                <div class="ordem-tabela">
+                  <input type="checkbox" name="" id="" />
+                  <i class="fa-solid fa-sort-down"></i>
+                  <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <table class="tabela-produtos">
+                  <tr>
+                    <th class="descricao-tabela">Descrição</th>
+
+                    <th>Codigo</th>
+
+                    <th>
+                      Unidade
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th class="checkbox">
+                      Preço
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th>
+                      Estoque
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th>
+                      Ativo/Inativo
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+
+                  <tr>
+                    <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                    <td>#45675</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Chocolate</td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 12</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Toddy</td>
+                    <td>#564649</td>
+                    <td>NU</td>
+
+                    <td>R$ 18,20</td>
+                    <td>70,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="" id="" />Chocolate Amargo
+                    </td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>20,000</td>
+                    <td>Inativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Feijão</td>
+                    <td>#79679</td>
+                    <td>NU</td>
+
+                    <td>R$18</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Arroz</td>
+                    <td>#78469</td>
+                    <td>NU</td>
+
+                    <td>R$ 32</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td colspan="11"><hr /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="container-secundario">
+                <button class="botao-incluir">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Incluir Produto</span>
+                </button>
+
+                <div class="opcoes">
+                  <a class="side-item">
+                    <i class="fas fa-upload"></i>
+                    <span>Exportar produto multiloja</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Sincronizar estoque de lojas</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Incluir categorias de produtos</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-edit"></i>
+                    <span>Editar categorias de produtos</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </dialog>
+      <dialog class="altteste dialog4">
+        <header>
+          <div class="teste234">
+            <div></div>
+            <a href="">
+              <i class="fa-solid fa-x"></i>
+            </a>
+          </div>
+        </header>
+        <main class="main-produtos">
+          <dialog>
+            <header>
+              <h3>Cadastrar novo produto</h3>
+              <br />
+              <div class="inf-form">
+                <p>Dados basicos</p>
+                <h5>(*) Campos obrigatorios</h5>
+              </div>
+            </header>
+
+            <div>
+              <form action="">
+                <div>
+                  <label for="nome">Nome/Descrição</label>
+                  <input type="text" id="nome" />
+                  <label for="codigo">Codigo (EAN)</label>
+                  <input type="text" id="codigo" />
+                  <label for="preco">Preco unitario </label>
+                  <input type="text" id="preco" />
+                </div>
+
+                <br />
+                <div>
+                  <label for="unidade">Unidade</label>
+                  <input type="text" id="unidade" />
+                  <label for="setor">Setor Balança</label>
+                  <input type="text" id="setor" />
+                  <label for="validade">Validade</label>
+                  <input type="text" id="validade" />
+                </div>
+
+                <div>
+                  <label for="peso">Peso</label>
+                  <input type="text" id="peso" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                  <label for="marca">Marca</label>
+                  <input type="text" id="marca" />
+                </div>
+                <div>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="Status">Status</label>
+                  <select name="escolha">
+                    <option value="opcao1">Ativo</option>
+                    <option value="opcao2" selected>Inativo</option>
+                  </select>
+                  <label for="imagem">Imagem</label>
+                  <input type="file" name="" id="imagem" />
+                </div>
+              </form>
+            </div>
+            <footer></footer>
+            <button class="fecharmodal">FECHAR</button>
+            <button class="salvarProduto">AVANÇAR</button>
+          </dialog>
+          <div class="principal principal-produtos">
+            <div class="espaçosdasprincipais">
+              <div class="container-principal">
+                <h2>PRODUTOS</h2>
+                <div class="container-filtras-pesquisar">
+                  <div class="filtras-pesquisar">
+                    <div class="part1-filtras">
+                      <span
+                        ><button class="botoes-produtos">
+                          <i class="fa-solid fa-filter"></i></button
+                      ></span>
+                      <span class="pesquisar"
+                        ><input
+                          placeholder="Pesquisar por codigo, descrição ou GTIN"
+                          type="text" />
+                        <button class="botao-pesquisar">
+                          <i class="fa-solid fa-magnifying-glass"></i></button
+                      ></span>
+
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </button>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-file-pdf"></i>
+                        </button>
+                      </span>
+                      <span>
+                        <button class="botoes-produtos">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <p>Situação: Sem filtros</p>
+                <div class="ordem-tabela">
+                  <input type="checkbox" name="" id="" />
+                  <i class="fa-solid fa-sort-down"></i>
+                  <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <table class="tabela-produtos">
+                  <tr>
+                    <th class="descricao-tabela">Descrição</th>
+
+                    <th>Codigo</th>
+
+                    <th>
+                      Unidade
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th class="checkbox">
+                      Preço
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+
+                    <th>
+                      Estoque
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th>
+                      Ativo/Inativo
+                      <label for="subscribe">
+                        <input
+                          class="input-ordem"
+                          type="checkbox"
+                          name=""
+                          id="subscribe"
+                        />
+                        <i class="fa-solid fa-sort-down ordem"></i>
+                      </label>
+                    </th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+
+                  <tr>
+                    <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                    <td>#45675</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Chocolate</td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 12</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Toddy</td>
+                    <td>#564649</td>
+                    <td>NU</td>
+
+                    <td>R$ 18,20</td>
+                    <td>70,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="" id="" />Chocolate Amargo
+                    </td>
+                    <td>#56649</td>
+                    <td>NU</td>
+
+                    <td>R$ 15</td>
+                    <td>20,000</td>
+                    <td>Inativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Feijão</td>
+                    <td>#79679</td>
+                    <td>NU</td>
+
+                    <td>R$18</td>
+                    <td>30,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Arroz</td>
+                    <td>#78469</td>
+                    <td>NU</td>
+
+                    <td>R$ 32</td>
+                    <td>50,000</td>
+                    <td>Ativo</td>
+                    <td>
+                      <i class="fa-solid fa-box-archive"></i>
+                      <i class="fa-solid fa-shopping-cart"></i>
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </td>
+                    <td><i class="fa-solid fa-sliders"></i></td>
+                  </tr>
+                  <tr>
+                    <td colspan="11"><hr /></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="container-secundario">
+                <button class="botao-incluir">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Incluir Produto</span>
+                </button>
+
+                <div class="opcoes">
+                  <a class="side-item">
+                    <i class="fas fa-upload"></i>
+                    <span>Exportar produto multiloja</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-sync"></i>
+                    <span>Sincronizar estoque de lojas</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Incluir categorias de produtos</span>
+                  </a>
+                  <hr />
+                  <a class="side-item">
+                    <i class="fas fa-edit"></i>
+                    <span>Editar categorias de produtos</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </dialog>
       <div class="principal principal-compras">
         <div class="titulo-sessao">
           <h3>Gestão de pedidos</h3>
-          <br>
+          
           <hr>
           <br>
           <p>
@@ -145,19 +1381,19 @@
         </div>
 
         <div class="info-compras">
-          <div style="background-image: linear-gradient(195deg, #42424a, #191919);" class="info-box">
+          <div style="background-image: linear-gradient(195deg, #42424a, #191919);" class="info-box dialog1" id="dialog1">
             <div class="info-texto">
-              <h3>Pedidos</h3>
+              <h3>PEDIDOS EM ABERTO</h3>
               <p>R$1000</p>
             </div>
             <i class="fa-solid fa-chart-line"></i>
           </div>
-          <div style="background-image: linear-gradient(195deg, #ec407a, #d81b60);" class="info-box"><div class="info-texto">
+          <div style="background-image: linear-gradient(195deg, #ec407a, #d81b60);" class="info-box dialog2" id="dialog2"><div class="info-texto">
             <h3>Pedidos 1</h3>
             <p>R$1000</p>
           </div>
           <i class="fa-solid fa-chart-line"></i></div>
-          <div style="background-image: linear-gradient(195deg, #66bb6a, #43a047);" class="info-box"><div class="info-texto">
+          <div style="background-image: linear-gradient(195deg, #66bb6a, #43a047);" class="info-box dialog3" id="dialog3"><div class="info-texto">
             <h3>TESTE 1</h3>
             <p>R$1000</p>
           </div>
@@ -165,15 +1401,16 @@
           <div>
           </div>
           
-          <div style="background-image: linear-gradient(195deg, #49a3f1, #1a73e8);" class="info-box"><div class="info-texto">
+          <div style="background-image: linear-gradient(195deg, #49a3f1, #1a73e8);" class="info-box dialog4" id="dialog4"><div class="info-texto">
             <h3>TESTE 2</h3>
             <p>R$1000</p>
           </div>
           <i class="fa-solid fa-chart-line"></i></div>
         </div>
+        <br>
         <div class="container">
           <div class="testegrafico">
-            <canvas id="myChart" style="height: 300px; width: 300px;"></canvas>
+            <canvas id="myChart"></canvas>
           </div>
           <div class="feed">
             <div class="feed-titulo">
@@ -185,7 +1422,7 @@
             <br>
             <div class="feed-single">
               <div class="feed-text">
-                <div class="circle-icon"><i class="fa-solid fa-bell"></i></div>
+                <div class="circle-icon"><i class="fa-solid fa-shopping-cart shopping"></i></div>
                 
                 <span>Teste de coisas</span>
               </div>

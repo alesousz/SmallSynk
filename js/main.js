@@ -2,18 +2,51 @@ document.getElementById("open_btn").addEventListener("click", function () {
   document.getElementById("sidebar").classList.toggle("open-sidebar");
 });
 
+const modal = document.querySelector("dialog");
 //criando uma model!!
 const botaoIncluir = document.querySelector(".botao-incluir");
-const modal = document.querySelector("dialog");
-
-botaoIncluir.onclick = function () {
-  modal.showModal();
-};
-
+const modais = document.querySelectorAll("dialog");
 const fecharModal = document.querySelector(".fecharmodal");
-fecharModal.onclick = function () {
-  modal.close();
-};
+const modalDeDiv = document.querySelectorAll(".info-box");
+
+if (botaoIncluir) {
+  botaoIncluir.onclick = function () {
+    modal.showModal();
+  };
+}
+if (fecharModal) {
+  fecharModal.onclick = function () {
+    modal.close();
+  };
+}
+//teste de filtro modal
+modalDeDiv.forEach((div) => {
+  div.addEventListener("click", filtrarModais);
+});
+
+function filtrarModais() {
+  const botoes = document.getElementById(this.id);
+  const valor = botoes.classList[1];
+  console.log(valor);
+  modais.forEach((modal) => {
+    const classesDoModal = Array.from(modal.classList);
+    console.log(classesDoModal);
+    if (classesDoModal.includes(valor)) {
+      modal.showModal(); // Abre o modal correspondente à classe do botão
+    }
+  });
+}
+
+// Criando modal tela de vendas
+
+function criarModal(elemento1, elemento2) {
+  if (elemento1) {
+    elemento1.addEventListener("click", function () {
+      elemento2.showModal(); // Adicionamos parênteses para invocar a função
+    });
+  }
+}
+criarModal(botaoIncluir, modal);
 
 //ESSA FUNÇÃO SERVE SO PRA MUDAR O ICONE <3 DEMOREI 75 HORAS PRA FAZER ELA
 
@@ -46,10 +79,16 @@ var chart = new Chart(ctx, {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "My First dataset",
+        label: "Vendas mês de Abril",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
         data: [0, 10, 5, 2, 20, 30, 45],
+      },
+      {
+        label: "Vendas mês de FADF",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(220, 123, 123)",
+        data: [0, 25, 15, 27, 13, 30, 68],
       },
     ],
   },
