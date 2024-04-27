@@ -1,84 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página de Venda</title>
-    <link rel="stylesheet" href="./style/estilovenda.css"> 
-</head>
-<body>
-    <header>
-        
-        <div class="logosmall">
-            <img src="./assets/Small Sync.png" alt="Logo do Site"> >
-        </div>
-        
-        <div class="dadosloja">
-            <div class="logoloja">
-                <img src="./assets/logoloja.png" alt="Logo da Loja">
-            </div>
-            <div class="infoloja">
-                <h1>Bom Preço</h1>
-                <p>CNPJ: 99.999/0001-99</p>
-                <p>End: R 22 nº 22 - Centro - Ituiutaba MG</p> 
-                <p>Telefone: (99) 9999-9999</p>
-            </div>
-        </div>
-    </header>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/estilovenda.css" />
+    <link rel="stylesheet" href="/style/estilo.css" />
+  </head>
+  <body class="pddvvenda">
+    <nav id="sidebar">
+      <div id="sidebar_content">
+        <div id="user">
+          <img src="/assets/perfil.png" id="user_avatar" alt="Avatar" />
 
-    <main>
-        <div class="areavenda">
-            
-            <div class="produtoinfo">
-                <div class="produtoimagem">
-                    <img src="./assets/coca.jpg" alt="Imagem do Produto">
-                </div>
-                <div class="produtodescricao">
-                    <h2>Coca Cola lt 350ml</h2>
-                </div>
+          <p id="user_infos">
+            <span class="item-description">
+              <a class="item-description" href="#">Fulano de Tal</a></span
+            >
+            <span class="item-description"> Lorem Ipsum </span>
+          </p>
+        </div>
+
+        <ul id="side_items">
+          <li class="side-item active">
+            <a href="/Dashboard.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="item-description"> Dashboard </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              <span class="item-description"> Usuários </span>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a class="sub-item" href="#">Clientes</a>
+              </li>
+              <li><a class="sub-item" href="#">Fornecedores</a></li>
+              <li><a class="sub-item" href="#">Usuarios</a></li>
+              <li><a class="sub-item" href="#">Produto</a></li>
+            </ul>
+          </li>
+
+          <li class="side-item">
+            <a href="#">
+              <i class="fas fa-registered"></i>
+
+              <span class="item-description"> Cadastro </span>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a class="sub-item" href="/cadastrofornecedor.html">Clientes</a>
+              </li>
+              <li>
+                <a class="sub-item" href="/cadastrofornecedor.html"
+                  >Fornecedores</a
+                >
+              </li>
+              <li>
+                <a class="sub-item" href="/cadastrousuarios.html">Usuarios</a>
+              </li>
+              <li>
+                <a class="sub-item" href="/cadastroprodutos.html">Produto</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="side-item">
+            <a href="#">
+              <i class="fa-solid fa-shopping-cart"></i>
+              <span class="item-description"> Compras </span>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a class="sub-item" href="#">Cotação</a>
+              </li>
+              <li><a class="sub-item" href="#">Pedidos</a></li>
+              <li><a class="sub-item" href="/produtos.html">Produto</a></li>
+            </ul>
+          </li>
+
+          <li class="side-item">
+            <a id="link-relatorios" href="/relatorios.html">
+              <i class="fas fa-file-alt"></i>
+
+              <span class="item-description"> Relatorios </span>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a class="sub-item" href="/relatorios.html">Clientes</a>
+              </li>
+              <li>
+                <a class="sub-item" href="/relatorios.html">Fornecedores</a>
+              </li>
+              <li><a class="sub-item" href="#">Usuarios</a></li>
+              <li><a class="sub-item" href="#">Produto</a></li>
+            </ul>
+          </li>
+
+          <li class="side-item">
+            <a href="/configurações.html">
+              <i class="fa-solid fa-gear"></i>
+              <span class="item-description"> Configurações </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="logout">
+        <button id="logout_btn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="item-description"> Logout </span>
+        </button>
+      </div>
+    </nav>
+    <main class="vendas">
+      <div class="areavenda">
+        <div class="itens-registrados">
+          <div class="produtoinfo">
+            <div class="produtoimagem">
+              <img src="./assets/coca.jpg" alt="Imagem do Produto" />
             </div>
 
-            
-            <div class="itensregistrados">
-                <h2>Itens Registrados</h2>
-                
+            <div class="produtodescricao">
+              <div class="container-input">
+                <label for="">CODIGO DE BARRA</label>
+                <input disabled class="inputDeProdutos" type="text" />
+              </div>
+
+              <div class="container-input">
+                <label for="">VALOR UNITARIO</label>
+                <input
+                  disabled
+                  class="inputDeProdutos"
+                  type="text"
+                  placeholder="R$ 0, 00"
+                />
+              </div>
+
+              <div class="container-input">
+                <label for="">TOTAL DE ITEM</label>
+                <input disabled class="inputDeProdutos" type="text" />
+              </div>
             </div>
+          </div>
+          <br />
+          <br />
+          <div class="campositem">
+            <div class="container-input-baixo">
+              <label for="">CODIGO</label>
+              <input disabled class="inputDeProdutos2" type="text" />
+            </div>
+
+            <div class="container-input-baixo">
+              <label for="x"> CODIGO </label>
+              <input disabled class="inputDeProdutos2" type="text" id="x" />
+            </div>
+          </div>
+          <div class="funcoes">
+            <div class="funcoescaixa">
+              <p>F2 - CODIGO INTERN//O</p>
+              <p>F1 - EXCLUIR ITEM//</p>
+              <p>F4 - INSERIR QUANTIDADE//</p>
+              <p>F5 - NOVA VENDA</p>
+              <p>F6 - GAVETA</p>
+            </div>
+            <div class="funcoescaixa">
+              <p>F9 - ALTERAR VENDA//</p>
+              <p>F10 - EXCLUIR VENDA//</p>
+              <p>F11 - FINALIZAR//</p>
+            </div>
+            <div class="funcoescaixa">
+              <p>Ctrl D - CPF</p>
+              <p>Ctrl P - PREÇO PRODUTO</p>
+              <p>Ctrl R - CONTAS RECEBER//</p>
+              <p>P - IMPRIMIR//</p>
+              <p>ESC - SAIR//</p>
+            </div>
+          </div>
         </div>
+
+        <div class="itensregistrados">
+          <div class="tabela">
+            <label for="">LISTA DE PRODUTOS</label>
+            <table class="tabela-caixa">
+              <tr>
+                <th>N° ITEM</th>
+
+                <th>Codigo</th>
+
+                <th>DESCRIÇÃO</th>
+
+                <th>Qtd</th>
+
+                <th>Valor Unit</th>
+                <th>TOTAL</th>
+              </tr>
+
+              <tr>
+                <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                <td>#45675</td>
+                <td>NU</td>
+
+                <td>R$ 15</td>
+                <td>50,000</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td>Chocolate</td>
+                <td>#56649</td>
+                <td>NU</td>
+
+                <td>R$ 12</td>
+                <td>30,000</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td>Toddy</td>
+                <td>#564649</td>
+                <td>NU</td>
+
+                <td>R$ 18,20</td>
+                <td>70,000</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td>Chocolate Amargo</td>
+                <td>#56649</td>
+                <td>NU</td>
+
+                <td>R$ 15</td>
+                <td>20,000</td>
+                <td>Inativo</td>
+              </tr>
+              <tr>
+                <td>Feijão</td>
+                <td>#79679</td>
+                <td>NU</td>
+
+                <td>R$18</td>
+                <td>30,000</td>
+                <td>Ativo</td>
+              </tr>
+              <tr>
+                <td>Arroz</td>
+                <td>#78469</td>
+                <td>NU</td>
+
+                <td>R$ 32</td>
+                <td>50,000</td>
+                <td>Ativo</td>
+              </tr>
+            </table>
+          </div>
+          <div class="subtotal">
+            <label for="">SUBTOTAL</label>
+            <input disabled type="text" />
+          </div>
+          <div class="container-valor">
+            <div class="subtotal">
+              <label for="">SUBTOTAL</label>
+              <input disabled type="text" />
+            </div>
+            <div class="subtotal">
+              <label for="">SUBTOTAL</label>
+              <input disabled type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-
-    
-    <div class="campositem">
-        <input type="text" placeholder="Quantidade">
-        <input type="text" placeholder="Código de Barras">
-    </div>
-    
-    <div class="precositem">
-        <p>Preço Unitário: R$ X,XX</p>
-        <p>Preço Total: R$ X,XX</p>
-    </div>
-    
-    <div class="subtotal">
-        <p>Subtotal: R$ X,XX</p>
-    </div>
-    
-    
-    <div class="funcoescaixa">
-        <ul>
-            <li>F1 Iniciar Caixa</li>
-            <li>F2 Inserir Cliente</li>
-            <li>F3 Receber Dinheiro</li>
-            <li>F4 Cartão de Crédito</li>
-            <li>F5 Cartão de Débito</li>
-            <li>F6 Cartão Benefício</li>
-            <li>F7 Cheque</li>
-            <li>F8 Sangria</li>
-            <li>F9 Encerrar Caixa</li>
-        </ul>
-    </div>
-
-    <footer>
-       
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>

@@ -1,0 +1,11 @@
+<div class="dadosloja">
+        <div class="infoloja">
+          <h1>Bom Preço</h1>
+          <p>CNPJ: 99.999/0001-99</p>
+          <p>End: R 22 nº 22 - Centro - Ituiutaba MG</p>
+          <p>Telefone: (99) 9999-9999</p>
+        </div>
+      </div>
+
+
+      F1 Iniciar Caixa F2 Inserir Cliente F3 Receber Dinheiro F4 Cartão de Crédito F5 Cartão de Débito F6 Cartão Benefício F7 Cheque F8 Sangria F9 Encerrar Caixa

@@ -1,124 +1,175 @@
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+input {
+  border: none;
+  background-color: white;
+}
+body.pddvvenda {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(112, 163, 235);
+  gap: 0px;
 }
 
 header {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: rgb(118, 169, 140);
-    padding: 10px 0;
-    text-align: center; 
-    max-height: 300px;
-    display: flex;
+  background-color: rgb(118, 169, 140);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 
-main {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.logosmall img {
-    height: 100px;
-}
-
-
-.dadosloja {
-    display: flex;
-    align-items: center;
-}
-
+.logosmall img,
 .logoloja img {
-    height: 80px;
-    margin-right: 20px;
+  height: 40px;
 }
 
-.infoloja h1 {
-    margin: 0;
+main.vendas {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(112, 163, 235);
+  align-items: normal;
 }
 
-.infoloja p {
-    margin: 5px 0;
+.itens-registrados {
+  background-color: rgb(112, 163, 235);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
 }
 
+.itens-registrados input {
+  height: 60px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.itens-registrados label {
+  width: 100%;
+  padding-left: 6px;
+  font-size: 18px;
+}
 
 .produtoinfo {
-    max-width: 100%;
-    max-height: 100%;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
+  display: flex;
+}
+
+.produtoimagem {
+  width: 60%;
 }
 
 .produtoimagem img {
-    max-width: 100%;
-    max-height: 100%;
-    margin-right: 20px;
-    border: 1px solid #ccc; 
+  width: 100%;
+  height: 100%;
 }
 
 .produtodescricao {
-    flex-grow: 1;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
 }
-
+.container-input {
+  background-color: rgb(34, 114, 235);
+  border-radius: 10px;
+  padding-top: 8px;
+}
+.container-input-baixo {
+  background-color: rgb(34, 114, 235);
+  border-radius: 10px;
+  padding-top: 8px;
+  width: 280px;
+}
+.campositem {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
 
 .areavenda {
-    display: flex;
+  display: flex;
+  gap: 30px;
 }
-
-.areavenda > * {
-    flex: 1;
-    margin-right: 10px;
-}
-
 
 .itensregistrados {
-    max-width: 100%;
-    max-height: 100%;
-    background-color: bisque;
-    margin-top: 20px;
-    border: 1px solid #ccc; 
-    display: flex;
-    flex-direction: column; 
+  background-color: rgb(112, 163, 235);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+}
+.tabela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 114, 235);
+  border-radius: 10px;
+}
+.tabela label {
+  border-radius: 10px;
 }
 
-
-.campositem {
-    list-style-type: none; 
-    padding: 0;
-    display: inline; 
-    margin-right: 10px; 
+.tabela-caixa {
+  border-radius: 10px;
+  margin-bottom: 0px;
 }
+
 .precositem,
 .subtotal {
-    margin-top: 10px; 
+  margin-top: 10px;
 }
 
-
+.funcoes {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-right: 10px;
+  gap: 10px;
+}
 .funcoescaixa {
-    background-color: aqua;
-    max-width: 100%;
-    max-height: 50%;
-    border: 1px solid #ccc;
-    padding: 10px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
 }
-
 
 .funcoescaixa ul {
-    list-style-type: none; 
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
-
 .funcoescaixa li {
-    display: inline-block; 
-    margin-right: 10px; 
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(34, 114, 235);
+  border-radius: 10px;
+}
+.subtotal input {
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  border: none;
+}
+.container-valor {
+  display: flex;
+  gap: 10px;
+}
+.container-valor input {
+  height: 60px;
 }
