@@ -94,7 +94,7 @@ main.vendas {
 
 .areavenda {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .itensregistrados {
@@ -130,7 +130,7 @@ main.vendas {
 .funcoes {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 34px;
   padding-right: 10px;
   gap: 10px;
 }

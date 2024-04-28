@@ -10,6 +10,7 @@ const fecharModal = document.querySelector(".fecharmodal");
 const modalDeDiv = document.querySelectorAll(".info-box");
 const modalDentroDaModal = document.querySelector(".botoes-compras");
 const modalDentrodoModal = document.querySelector(".modalDentrodoModal");
+const botaoUsuarios = document.querySelector("#botao-usuario");
 
 if (botaoIncluir) {
   botaoIncluir.onclick = function () {
@@ -50,6 +51,7 @@ function criarModal(elemento1, elemento2) {
 }
 criarModal(botaoIncluir, modal);
 criarModal(modalDentroDaModal, modalDentrodoModal);
+criarModal(botaoUsuarios, modal);
 
 //ESSA FUNÇÃO SERVE SO PRA MUDAR O ICONE <3 DEMOREI 75 HORAS PRA FAZER ELA
 
@@ -80,16 +82,16 @@ var chart = new Chart(ctx, {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "Vendas mês de Abril",
+        label: "Vendas de 2023",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: [0, 10, 5, 2, 13, 20, 18],
       },
       {
-        label: "Vendas mês de FADF",
+        label: "Vendas de 2024",
         backgroundColor: "rgb(21, 54, 142)",
         borderColor: "rgb(21, 54, 142)",
-        data: [0, 25, 15, 27, 13, 30, 68],
+        data: [13, 15, 23, 27, 27],
       },
     ],
   },

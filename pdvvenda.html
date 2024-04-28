@@ -19,98 +19,24 @@
       <div id="sidebar_content">
         <div id="user">
           <img src="/assets/perfil.png" id="user_avatar" alt="Avatar" />
-
-          <p id="user_infos">
-            <span class="item-description">
-              <a class="item-description" href="#">Fulano de Tal</a></span
-            >
-            <span class="item-description"> Lorem Ipsum </span>
-          </p>
         </div>
 
         <ul id="side_items">
           <li class="side-item active">
-            <a href="/Dashboard.html">
-              <i class="fa-solid fa-chart-line"></i>
-              <span class="item-description"> Dashboard </span>
+            <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </li>
 
           <li class="side-item">
-            <a href="#">
+            <a href="/Profile.html">
               <i class="fa-solid fa-user"></i>
-              <span class="item-description"> Usuários </span>
             </a>
-            <ul class="sub-menu">
-              <li>
-                <a class="sub-item" href="#">Clientes</a>
-              </li>
-              <li><a class="sub-item" href="#">Fornecedores</a></li>
-              <li><a class="sub-item" href="#">Usuarios</a></li>
-              <li><a class="sub-item" href="#">Produto</a></li>
-            </ul>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fas fa-registered"></i>
-
-              <span class="item-description"> Cadastro </span>
-            </a>
-            <ul class="sub-menu">
-              <li>
-                <a class="sub-item" href="/cadastrofornecedor.html">Clientes</a>
-              </li>
-              <li>
-                <a class="sub-item" href="/cadastrofornecedor.html"
-                  >Fornecedores</a
-                >
-              </li>
-              <li>
-                <a class="sub-item" href="/cadastrousuarios.html">Usuarios</a>
-              </li>
-              <li>
-                <a class="sub-item" href="/cadastroprodutos.html">Produto</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-shopping-cart"></i>
-              <span class="item-description"> Compras </span>
-            </a>
-            <ul class="sub-menu">
-              <li>
-                <a class="sub-item" href="#">Cotação</a>
-              </li>
-              <li><a class="sub-item" href="#">Pedidos</a></li>
-              <li><a class="sub-item" href="/produtos.html">Produto</a></li>
-            </ul>
-          </li>
-
-          <li class="side-item">
-            <a id="link-relatorios" href="/relatorios.html">
-              <i class="fas fa-file-alt"></i>
-
-              <span class="item-description"> Relatorios </span>
-            </a>
-            <ul class="sub-menu">
-              <li>
-                <a class="sub-item" href="/relatorios.html">Clientes</a>
-              </li>
-              <li>
-                <a class="sub-item" href="/relatorios.html">Fornecedores</a>
-              </li>
-              <li><a class="sub-item" href="#">Usuarios</a></li>
-              <li><a class="sub-item" href="#">Produto</a></li>
-            </ul>
           </li>
 
           <li class="side-item">
             <a href="/configurações.html">
               <i class="fa-solid fa-gear"></i>
-              <span class="item-description"> Configurações </span>
             </a>
           </li>
         </ul>
@@ -123,6 +49,7 @@
         </button>
       </div>
     </nav>
+
     <main class="vendas">
       <div class="areavenda">
         <div class="itens-registrados">
@@ -139,12 +66,7 @@
 
               <div class="container-input">
                 <label for="">VALOR UNITARIO</label>
-                <input
-                  disabled
-                  class="inputDeProdutos"
-                  type="text"
-                  placeholder="R$ 0, 00"
-                />
+                <input disabled class="inputDeProdutos" type="text" />
               </div>
 
               <div class="container-input">
@@ -153,7 +75,7 @@
               </div>
             </div>
           </div>
-          <br />
+
           <br />
           <div class="campositem">
             <div class="container-input-baixo">
@@ -207,7 +129,7 @@
               </tr>
 
               <tr>
-                <td><input type="checkbox" name="" id="" /> Sucrilhos</td>
+                <td>Sucrilhos</td>
                 <td>#45675</td>
                 <td>NU</td>
 
@@ -281,5 +203,6 @@
     </main>
 
     <footer></footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
