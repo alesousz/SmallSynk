@@ -754,3 +754,28 @@ dialog {
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
 }
+
+.perfil {
+  padding: 20px; 
+}
+
+.perfil .card-body .text-muted.mb-2 {
+  margin-bottom: 5px;
+}
+
+.perfil .card-header{
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.perfil img {
+  border-radius: 50%;
+  height: auto;
+  max-width: 100%;
+  margin-right: 10px;
+}
+
+.perfil .d-flex {
+  margin: 10px;
+}
+
