@@ -2,6 +2,17 @@ document.getElementById("open_btn").addEventListener("click", function () {
   document.getElementById("sidebar").classList.toggle("open-sidebar");
 });
 
+document.getElementById("open_btn").addEventListener("click", function () {
+  document.getElementById("cliente").classList.toggle("open-cliente");
+});
+
+const botao2 = document.querySelector(".open_btn2");
+if (botao2) {
+  document.getElementById("open_btn2").addEventListener("click", function () {
+    document.getElementById("cliente2").classList.toggle("open-cliente2");
+  });
+}
+
 const modal = document.querySelector("dialog");
 //criando uma model!!
 const botaoIncluir = document.querySelector(".botao-incluir");
@@ -22,6 +33,7 @@ if (fecharModal) {
     modal.close();
   };
 }
+
 //teste de filtro modal
 modalDeDiv.forEach((div) => {
   div.addEventListener("click", filtrarModais);
